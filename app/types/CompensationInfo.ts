@@ -1,3 +1,6 @@
+import type Company from './Company';
+import type Job from './Job';
+
 export type CompensationInfoEquityValue = {
   type: 'value';
   vestingPeriod: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
@@ -38,22 +41,14 @@ export type CompensationInfo = {
    * The details about the company in question
    *
    */
-  company: {
-    name: string;
-    industry: string;
-  };
+  company: Company;
 
   /**
    *
    * Details about the Job
    *
    */
-  job: {
-    title: string;
-    country: string;
-    region: string;
-    city: string;
-  };
+  job: Job;
 
   /**
    *
@@ -68,13 +63,6 @@ export type CompensationInfo = {
    *
    */
   contractType: 'fullTime' | 'partTime' | 'internship' | 'temporary' | 'contract/freelance';
-
-  /**
-   *
-   * Whether the company is located in the same country as the employee
-   *
-   */
-  isLocalCompany: boolean;
 
   /**
    *
