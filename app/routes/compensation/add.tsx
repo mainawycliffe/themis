@@ -1,9 +1,15 @@
-import type { ActionFunction } from '@remix-run/node';
+import type { ActionFunction, MetaFunction } from '@remix-run/node';
 import AddCompensationInfoForm from '~/components/AddCompensationInfoForm';
 
 export const action: ActionFunction = async ({ request }) => {
   console.log(request);
 };
+
+export const meta: MetaFunction = () => ({
+  charset: 'utf-8',
+  title: 'Add Compensation - Tech Pays',
+  viewport: 'width=device-width,initial-scale=1',
+});
 
 export default function AddPage() {
   return (
