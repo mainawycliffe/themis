@@ -24,6 +24,13 @@ type Company = {
    *
    */
   localEmployeesCount: '1' | 'under-5' | 'under-10' | 'under-50' | 'under-100' | 'over-100';
+
+  /**
+   *
+   * If not local company, where are the offices located
+   *
+   */
+  country: string;
 };
 
 export default Company;
