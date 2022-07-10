@@ -1,3 +1,5 @@
+export type CompanyEmployeeEstimateCount = '1' | '2-5' | '6-10' | '11-50' | '51-100' | 'over-100';
+
 type Company = {
   name: string;
   industry: string;
@@ -8,7 +10,7 @@ type Company = {
    * Gives an estimate of the size of the company
    *
    */
-  companyEmployeesCount: '1' | 'under-5' | 'under-10' | 'under-50' | 'under-100' | 'over-100';
+  companyEmployeesCount: CompanyEmployeeEstimateCount;
 
   /**
    *
@@ -16,14 +18,14 @@ type Company = {
    * companies can hire from different locations without having offices.
    *
    */
-  isLocalCompany: boolean;
+  status: 'local' | 'abroad';
 
   /**
    *
    * If company isn't local, the number of employees in the company
    *
    */
-  localEmployeesCount: '1' | 'under-5' | 'under-10' | 'under-50' | 'under-100' | 'over-100';
+  localEmployeesCount: CompanyEmployeeEstimateCount;
 
   /**
    *

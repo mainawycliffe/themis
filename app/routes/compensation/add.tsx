@@ -7,7 +7,7 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function AddPage() {
   return (
-    <div className='flex flex-col py-8 w-full md:w-[60rem]  md:mx-auto'>
+    <div className='flex flex-col p-4 lg:py-8 w-full lg:w-[50rem] lg:mx-auto'>
       <div className='block'>
         <h3 className='block text-3xl text-center'>Add Compensation Info</h3>
       </div>

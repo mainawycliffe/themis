@@ -10,6 +10,43 @@
   @apply text-lg font-semibold block;
 }
 
-.form-group > input {
+.form-group > input,
+select {
   @apply py-2 px-4 block border border-black rounded-lg font-medium;
+}
+
+.form-group > .hint {
+  @apply text-lg font-medium italic;
+}
+
+.form-group > .error-message {
+  @apply text-red-500 text-lg;
+}
+
+.form-group > .input-group {
+  @apply mt-1 relative rounded-md shadow-sm;
+}
+
+.input-group > .input-group-prepend {
+  @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+}
+
+.input-group > input {
+  @apply py-2 px-4 block border border-black rounded-lg font-medium w-full pl-7 pr-12;
+}
+
+.input-group > .input-group-append {
+  @apply absolute inset-y-0 right-0 flex items-center;
+}
+
+.form-column {
+  @apply flex flex-col w-full md:flex-row md:space-x-4;
+}
+
+.form-column > .form-col-group {
+  @apply flex flex-col space-y-2 w-1/2;
+}
+
+.form-column > .form-column-currency-append {
+  @apply flex flex-col space-y-2 mt-9 w-[15rem];
 }
