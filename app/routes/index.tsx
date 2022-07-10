@@ -1,24 +1,21 @@
+import { Link } from 'react-router-dom';
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
-      <h1 className='font-bold text-7xl'>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a target='_blank' href='https://remix.run/tutorials/blog' rel='noreferrer'>
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a target='_blank' href='https://remix.run/tutorials/jokes' rel='noreferrer'>
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target='_blank' href='https://remix.run/docs' rel='noreferrer'>
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className='h-screen w-screen flex flex-col justify-center'>
+      <div className='w-screen mx-auto text-center flex flex-col space-y-4'>
+        <div className='text-2xl'>Hi, Welcome to Wage Info</div>
+        <div className='text-lg'>Please come back later, we are currently in the process of correcting data.</div>
+        <div className='p-4'>
+          <Link
+            to={{
+              pathname: '/compensation/add',
+            }}
+            className='text-lg bg-blue-800 py-3 px-4 rounded-md shadow-md text-white'>
+            Add My Compensation
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
