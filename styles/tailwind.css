@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-group {
+  @apply flex flex-col space-y-2 w-full;
+}
+
+.form-group > label {
+  @apply text-lg font-semibold block;
+}
+
+.form-group > input {
+  @apply py-2 px-4 block border border-black rounded-lg font-medium;
+}
