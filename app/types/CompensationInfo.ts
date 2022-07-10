@@ -8,12 +8,7 @@ export type CompensationInfoEquityValue = {
     amount: number;
     currency: string;
   };
-};
-
-export type AmountSpecs = {
-  amount: number;
-  currency: string;
-  period: 'year' | 'month' | 'day' | 'hour';
+  details?: string;
 };
 
 export type CompensationInfoEquityUnits = {
@@ -21,6 +16,13 @@ export type CompensationInfoEquityUnits = {
   vestingPeriod: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   quantity: number;
   units: 'units' | 'percent';
+  details?: string;
+};
+
+export type AmountSpecs = {
+  amount: number;
+  currency: string;
+  period: 'year' | 'month' | 'day' | 'hour';
 };
 
 /**
@@ -109,6 +111,20 @@ export type CompensationInfo = {
       amount: number;
       currency: string;
     }[];
+
+    /**
+     *
+     * Whether the company offers equity
+     *
+     */
+    equityOffered:
+      | 'None'
+      | 'RSU (Restricted Stock Units)'
+      | 'Phantom/Virtual Shares'
+      | 'ESOP (Equity Share Option)'
+      | 'SAR (Share Appreciation Rights)'
+      | 'Growth/shares options'
+      | 'Other (Please add in the comment)';
 
     /**
      *
