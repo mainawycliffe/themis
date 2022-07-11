@@ -147,6 +147,30 @@ export default function PrivateDetails({ onNext }: Props) {
           </select>
         </div>
 
+        <div className='form-group'>
+          <label>Email</label>
+
+          <input type='text' {...register('personInformation.emailAddress')} />
+
+          <label>
+            <input value='true' type='checkbox' {...register('personInformation.notify.siteLaunches')} /> Notify me when
+            the site launches
+          </label>
+          <label>
+            <input value='true' type='checkbox' {...register('personInformation.notify.dataIsAdded')} /> Notify me when
+            this data is added
+          </label>
+          <label>
+            <input value='true' type='checkbox' {...register('personInformation.notify.newCountryLaunches')} /> Notify
+            me of new country launches
+          </label>
+        </div>
+
+        <div className='form-group'>
+          <label>Private comment for this survey</label>
+          <textarea {...register('personInformation.comments')}></textarea>
+        </div>
+
         <div className='flex flex-row justify-end'>
           <button type='submit' className='bg-blue-800 text-white py-2 px-6 rounded-md shadow-md font-bold'>
             Submit Details

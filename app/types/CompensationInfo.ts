@@ -31,6 +31,7 @@ export type AmountSpecs = {
  *
  */
 export type CompensationInfo = {
+  id: string;
   /**
    *
    * Whether we should hide details that may identify the user.
@@ -214,6 +215,15 @@ export type CompensationInfo = {
      *
      */
     nonCompeteClause: 'yes' | 'no' | 'notSure' | 'paid' | 'notPaid';
+
+    emailAddress?: string;
+    notify: {
+      newCountryLaunches: boolean;
+      siteLaunches: boolean;
+      dataIsAdded: boolean;
+    };
+
+    comments: string;
   };
 };
 
