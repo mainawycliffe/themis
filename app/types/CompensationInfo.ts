@@ -151,7 +151,7 @@ export type CompensationInfo = {
      * The number of days of paid vacation per year.
      *
      */
-    paidDaysOff: boolean;
+    paidDaysOff: number;
 
     /**
      *
@@ -164,6 +164,8 @@ export type CompensationInfo = {
      * Other benefits the company offers to employees.
      */
     otherBenefits: string[];
+
+    additionalBenefits: string;
   };
 
   /**
