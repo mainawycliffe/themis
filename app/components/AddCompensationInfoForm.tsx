@@ -31,7 +31,9 @@ export default function AddCompensationInfoForm() {
           <div className='py-4 px-2'>
             <div className='flex items-center'>
               <div
-                className={`flex items-center relative ${
+                role='button'
+                onClick={() => setCurrentStep('compensation')}
+                className={`flex items-center relative cursor-pointer ${
                   currentStep !== 'compensation' ? 'text-teal-600' : 'text-gray-500'
                 }`}>
                 <div
@@ -55,7 +57,12 @@ export default function AddCompensationInfoForm() {
                 className={`flex-auto border-t-2 transition duration-500 ease-in-out  ${
                   currentStep !== 'compensation' ? 'border-teal-600' : 'border-gray-300'
                 }`}></div>
-              <div className={`flex items-center ${currentStep === 'private-info' ? 'text-white' : ''}  relative`}>
+              <div
+                role='button'
+                onClick={() => setCurrentStep('benefits')}
+                className={`flex items-center cursor-pointer ${
+                  currentStep === 'private-info' ? 'text-white' : ''
+                }  relative`}>
                 <div
                   className={`rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 ${
                     currentStep === 'private-info' ? 'text-teal-600 border-teal-600' : 'border-gray-300'
@@ -77,7 +84,10 @@ export default function AddCompensationInfoForm() {
                 className={`flex-auto border-t-2 transition duration-500 ease-in-out  ${
                   currentStep === 'private-info' ? 'border-teal-600' : 'border-gray-300'
                 }`}></div>
-              <div className='flex items-center text-gray-500 relative'>
+              <div
+                role='button'
+                onClick={() => setCurrentStep('private-info')}
+                className='flex items-center text-gray-500 relative cursor-pointer'>
                 <div className='rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300'>
                   <FontAwesomeIcon className='feather feather-mail h-full w-full' icon={faUserEdit} />
                 </div>
