@@ -4,7 +4,7 @@ export default function Index() {
   return (
     <div className='h-screen w-screen flex flex-col justify-center'>
       <div className='w-screen mx-auto text-center flex flex-col space-y-4'>
-        <div className='text-2xl'>Hi, Welcome to Wage Info</div>
+        {/* <div className='text-2xl'>Hi, Welcome to Wage Info</div> */}
         <div className='text-lg'>Please come back later, we are currently in the process of correcting data.</div>
         <div className='p-4'>
           <Link
